@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+    web:
+        build: .
+        command: python CGO_Interview_Session/manage.py runserver 0.0.0.0:9999
+        volumes:
+            - .:/app
+        ports:
+            - "9999:9999"
